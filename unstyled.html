@@ -162,7 +162,8 @@
          <a href="/oss/loki/">Loki</a>. Just like for metrics, you first need to add your data source to Grafana.
       </p>
       <span id="add-loki-datasource" class="interactive" data-targetaction="sequence" data-reftarget="span#add-loki-datasource">
-         <ol>
+         <ul>
+            <!-- Highlight a menu item and click it -->
             <li class="interactive" 
                 data-reftarget="a[data-testid='data-testid Nav menu item'][href='/connections']"
                 data-targetaction='highlight'>
@@ -171,20 +172,34 @@
                 data-reftarget="Add new data source"
                 data-targetaction='button'>
                Click <strong>+ Add new data source</strong>.</li>
+            <!-- Fill out a form item -->
+            <li class="interactive" 
+                data-reftarget="input[type='text']"
+                data-targetaction='formfill' 
+                data-targetvalue='Loki'>
+               Enter <strong>Loki</strong> in the search bar.</li>
+            <!-- Highlight a menu item and click it -->
             <li class="interactive" 
                 data-reftarget="a[href='/connections/datasources/loki']"
                 data-targetaction='highlight'>
-               In the list of data sources, click <strong>Loki</strong>.</li>
+               Click <strong>Loki</strong> data source.</li>
+            <!-- Add new data source button -->
+            <li class="interactive"
+                data-reftarget="Add new data source"
+                data-targetaction='button'>
+               Click <strong>Add new data source</strong> in the upper right.</li>
+            <!-- Fill out the URL field -->
             <li class="interactive" 
                 data-reftarget="input[name='url']"
                 data-targetaction='formfill' 
                 data-targetvalue='http://loki:3100'>
                In the URL box, enter <code>http://loki:3100</code></li>
+            <!-- Save and test button -->
             <li class="interactive"
                 data-reftarget="Save & Test"
                 data-targetaction='button'>
                Scroll to the bottom of the page and click <strong>Save &amp; Test</strong> to save your changes.</li>
-         </ol>
+         </ul>
       </span>
       <p>You should see the message “Data source successfully connected.” Loki is now available as a data source in Grafana.</p>
       <h2 id="explore-your-logs">Explore your logs</h2>
